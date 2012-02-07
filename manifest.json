@@ -1,0 +1,20 @@
+{
+  "name": "Twitter Favicon Counter",
+  "version": "3.0",
+  "description": "Show new tweets counter in the favicon.",
+  "background_page": "background.html",
+  "permissions": [
+    "https://twitter.com/",
+    "http://twitter.com/"
+  ],
+  "icons": {
+    "16": "larry16.png",
+    "48": "larry48.png",
+    "128": "larry128.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://twitter.com/", "https://twitter.com/"],
+    "js": ["tinycon.js"],
+    "all_frames": true
+  }]
+}
